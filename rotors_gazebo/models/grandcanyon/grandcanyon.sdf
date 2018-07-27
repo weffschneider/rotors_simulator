@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="grandcanyon">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <heightmap>
+            <uri>model://grandcanyon/materials/textures/grandcanyon_cropped_120.tif</uri>
+            <size>1000 1000 125</size>
+            <pos>0 0 -967.5</pos>
+          </heightmap>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>0.4</mu>
+              <mu2>0.4</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name="visual">
+        <!-- material>
+          <script>
+            <uri>file://grandcanyon/materials/scripts/sand.material</uri>
+            <name>sand</name>
+          </script>
+        </material -->
+        <geometry>
+          <heightmap>
+            <texture>
+              <diffuse>file://media/materials/textures/terrain.png</diffuse>
+              <normal>file://media/materials/textures/flat_normal.png</normal>
+              <size>40</size>              
+            </texture>
+	    <texture>
+	      <diffuse>file://media/materials/textures/granite.jpg</diffuse>
+              <normal>file://media/materials/textures/flat_normal.png</normal>
+              <size>50</size>
+            </texture>
+            <texture>
+	      <diffuse>file://media/materials/textures/granite2.jpg</diffuse>
+              <normal>file://media/materials/textures/flat_normal.png</normal>
+              <size>50</size>
+            </texture>
+            <texture>
+              <diffuse>file://media/materials/textures/dirt_diffusespecular.png</diffuse>
+              <normal>file://media/materials/textures/flat_normal.png</normal>
+              <size>50</size>
+            </texture>
+            <blend>
+              <min_height>50</min_height>
+              <fade_dist>10</fade_dist>
+            </blend>
+	    <blend>
+              <min_height>65</min_height>
+              <fade_dist>10</fade_dist>
+            </blend>
+	    <blend>
+              <min_height>80</min_height>
+              <fade_dist>40</fade_dist>
+            </blend>
+            <uri>model://grandcanyon/materials/textures/grandcanyon_cropped_120.tif</uri>
+            <size>1000 1000 125</size>
+            <pos>0 0 -967.5</pos>
+          </heightmap>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
